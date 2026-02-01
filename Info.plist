@@ -1,0 +1,43 @@
+   <?xml version="1.0" encoding="UTF-8"?>
+   <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+   <plist version="1.0">
+   <dict>
+       <key>CFBundleDevelopmentRegion</key>
+       <string>en</string>
+       <key>CFBundleExecutable</key>
+       <string>$(EXECUTABLE_NAME)</string>
+       <key>CFBundleIdentifier</key>
+       <string>com.zincoverde.GrokTV</string> <!-- Update to your actual bundle ID -->
+       <key>CFBundleInfoDictionaryVersion</key>
+       <string>6.0</string>
+       <key>CFBundleName</key>
+       <string>GrokTV</string>
+       <key>CFBundlePackageType</key>
+       <string>APPL</string>
+       <key>CFBundleShortVersionString</key>
+       <string>1.0</string>
+       <key>CFBundleVersion</key>
+       <string>1</string>
+       <key>LSRequiresIPhoneOS</key>
+       <false/> <!-- tvOS, not iOS -->
+       <key>NSAppTransportSecurity</key>
+       <dict>
+           <key>NSAllowsArbitraryLoads</key>
+           <true/> <!-- Allows HTTPS API calls to api.x.ai; consider restricting in production -->
+       </dict>
+       <key>UILaunchStoryboardName</key>
+       <string></string> <!-- SwiftUI handles launch -->
+       <key>UISupportedInterfaceOrientations~tv</key>
+       <array>
+           <string>UIInterfaceOrientationLandscapeLeft</string>
+           <string>UIInterfaceOrientationLandscapeRight</string>
+       </array> <!-- Landscape for tvOS -->
+       <key>GCSupportedGameControllers</key>
+       <array>
+           <dict>
+               <key>ProfileName</key>
+               <string>ExtendedGamepad</string>
+           </dict>
+       </array> <!-- For remote/focus support in tvOS -->
+   </dict>
+   </plist>
