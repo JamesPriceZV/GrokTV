@@ -9,7 +9,10 @@ struct SettingsView: View {
             Text("Enter xAI API Key")
                 .font(.title)
             TextField("API Key", text: $apiKey)
-                .textFieldStyle(.roundedBorder)
+                .textFieldStyle(.plain)
+                .padding(12)
+                .background(Color.white.opacity(0.12))
+                .cornerRadius(8)
                 .font(.title2)
                 .padding()
             Button("Save") {

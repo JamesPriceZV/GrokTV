@@ -48,7 +48,10 @@ struct ChatView: View {
             // Input area
             HStack {
                 TextField("Type your message...", text: $newMessage)
-                    .textFieldStyle(.roundedBorder)
+                    .textFieldStyle(.plain)
+                    .padding(10)
+                    .background(Color.white.opacity(0.12))
+                    .cornerRadius(8)
                     .font(.title2)
                     .disabled(isSending)
                     .focusable() // tvOS remote support
@@ -114,4 +117,3 @@ struct ChatView: View {
         sendMessage()
     }
 }
-
