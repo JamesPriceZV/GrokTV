@@ -25,7 +25,7 @@ struct GrokTVApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ChatContentView()
         }
         .modelContainer(sharedModelContainer)
     }

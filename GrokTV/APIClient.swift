@@ -1,3 +1,5 @@
+import Foundation
+
 class APIClient {
     static let shared = APIClient()
     private let baseURL = "https://api.x.ai/v1"
@@ -58,4 +60,3 @@ class APIClient {
         return nil
     }
 }
-

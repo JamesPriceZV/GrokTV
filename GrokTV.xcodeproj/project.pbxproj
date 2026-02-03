@@ -6,6 +6,9 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		550C05F92F2FB22E000CFB44 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,24 +30,12 @@
 		550C05E72F2FB22C000CFB44 /* GrokTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrokTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		550C05F82F2FB22E000CFB44 /* GrokTVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GrokTVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		550C06022F2FB22E000CFB44 /* GrokTVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GrokTVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		550C062A2F2FB548000CFB44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		550C060A2F2FB22E000CFB44 /* Exceptions for "GrokTV" folder in "GrokTV" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 550C05E62F2FB22C000CFB44 /* GrokTV */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		550C05E92F2FB22C000CFB44 /* GrokTV */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				550C060A2F2FB22E000CFB44 /* Exceptions for "GrokTV" folder in "GrokTV" target */,
-			);
 			path = GrokTV;
 			sourceTree = "<group>";
 		};
@@ -92,6 +83,7 @@
 				550C05FB2F2FB22E000CFB44 /* GrokTVTests */,
 				550C06052F2FB22E000CFB44 /* GrokTVUITests */,
 				550C05E82F2FB22C000CFB44 /* Products */,
+				550C062A2F2FB548000CFB44 /* Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -406,7 +398,7 @@
 				SDKROOT = appletvos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TVOS_DEPLOYMENT_TARGET = 26.2;
+				TVOS_DEPLOYMENT_TARGET = 17.0;
 			};
 			name = Debug;
 		};
@@ -462,7 +454,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = appletvos;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				TVOS_DEPLOYMENT_TARGET = 26.2;
+				TVOS_DEPLOYMENT_TARGET = 17.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -485,7 +477,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GrokTV.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GrokTV";
-				TVOS_DEPLOYMENT_TARGET = 26.2;
+				TVOS_DEPLOYMENT_TARGET = 17.0;
 			};
 			name = Debug;
 		};
@@ -507,7 +499,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GrokTV.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GrokTV";
-				TVOS_DEPLOYMENT_TARGET = 26.2;
+				TVOS_DEPLOYMENT_TARGET = 17.0;
 			};
 			name = Release;
 		};
