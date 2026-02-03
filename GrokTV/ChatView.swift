@@ -1,4 +1,4 @@
-import SwiftUI
+internal import SwiftUI
 
 struct ChatView: View {
     @Binding var conversation: Conversation?
@@ -72,10 +72,14 @@ struct ChatView: View {
         .navigationTitle(conversation?.title ?? "Chat")
         .background(Color.black)
         .toolbar {
-            ToolbarItem(placement: .bottomBar) {
-                Button("Trend Analysis") {
-                    analyzeTrends()
+            if #available(tvOS 18.0, *) {
+                ToolbarItem(placement: .bottomBar) {
+                    Button("Trend Analysis") {
+                        analyzeTrends()
+                    }
                 }
+            } else {
+                // Fallback on earlier versions
             }
         }
     }

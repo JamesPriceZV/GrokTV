@@ -1,4 +1,4 @@
-import SwiftUI
+internal import SwiftUI
 
 // Alternate container to avoid duplicate @main app declarations.
 // This prevents: Ambiguous implicit access level for import of 'SwiftUI',

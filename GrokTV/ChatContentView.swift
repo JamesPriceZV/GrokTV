@@ -17,7 +17,7 @@ struct ChatContentView: View {
                             selectedConversation = newConvo
                         }
                     }
-                    ToolbarItem(placement: .bottomBar) {
+                    ToolbarItem(placement: .primaryAction) {
                         Button("Settings") {
                             showSettings = true
                         }

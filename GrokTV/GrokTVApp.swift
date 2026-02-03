@@ -5,7 +5,7 @@
 //  Created by Zinco Verde, Inc. on 2/1/26.
 //
 
-import SwiftUI
+internal import SwiftUI
 import SwiftData
 
 @main
