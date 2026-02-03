@@ -1,40 +1,27 @@
-internal import SwiftUI
+import SwiftUI
 
 struct ChatView: View {
     @Binding var conversation: Conversation?
     @State private var newMessage = ""
     @State private var isSending = false
     @State private var generatedImageURL: URL? = nil
+
+    private var messages: [Message] {
+        conversation?.messages ?? []
+    }
+
     var body: some View {
         VStack {
             // Message list with lazy loading for performance
             ScrollView {
                 LazyVStack(alignment: .leading, spacing: 20) {
-                    ForEach(conversation?.messages ?? []) { message in
-                        HStack {
-                            if message.isUser {
-                                Spacer()
-                                Text(message.content)
-                                    .padding()
-                                    .background(Color.blue.opacity(0.8))
-                                    .cornerRadius(10)
-                                    .foregroundColor(.white)
-                                    .font(.title3)
-                            } else {
-                                Text(message.content)
-                                    .padding()
-                                    .background(Color.gray.opacity(0.8))
-                                    .cornerRadius(10)
-                                    .foregroundColor(.white)
-                                    .font(.title3)
-                                Spacer()
-                            }
-                        }
+                    ForEach(messages) { message in
+                        MessageRow(message: message)
                     }
                 }
                 .padding()
             }
-            .scrollContentBackground(.hidden)
+            .background(Color.black)
 
             if let url = generatedImageURL {
                 AsyncImage(url: url) { image in
@@ -72,14 +59,10 @@ struct ChatView: View {
         .navigationTitle(conversation?.title ?? "Chat")
         .background(Color.black)
         .toolbar {
-            if #available(tvOS 18.0, *) {
-                ToolbarItem(placement: .bottomBar) {
-                    Button("Trend Analysis") {
-                        analyzeTrends()
-                    }
+            ToolbarItem(placement: .primaryAction) {
+                Button("Trend Analysis") {
+                    analyzeTrends()
                 }
-            } else {
-                // Fallback on earlier versions
             }
         }
     }
@@ -119,5 +102,31 @@ struct ChatView: View {
         let prompt = "Analyze current trends on X"
         newMessage = prompt
         sendMessage()
+    }
+}
+
+private struct MessageRow: View {
+    let message: Message
+
+    var body: some View {
+        HStack {
+            if message.isUser {
+                Spacer()
+                Text(message.content)
+                    .padding()
+                    .background(Color.blue.opacity(0.8))
+                    .cornerRadius(10)
+                    .foregroundColor(.white)
+                    .font(.title3)
+            } else {
+                Text(message.content)
+                    .padding()
+                    .background(Color.gray.opacity(0.8))
+                    .cornerRadius(10)
+                    .foregroundColor(.white)
+                    .font(.title3)
+                Spacer()
+            }
+        }
     }
 }

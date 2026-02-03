@@ -5,7 +5,7 @@
 //  Created by Zinco Verde, Inc. on 2/1/26.
 //
 
-internal import SwiftUI
+import SwiftUI
 import SwiftData
 
 struct ContentView: View {

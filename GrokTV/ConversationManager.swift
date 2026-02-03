@@ -1,6 +1,6 @@
 import Foundation
 import Combine
-internal import SwiftUI
+import SwiftUI
 class ConversationManager: ObservableObject {
     static let shared = ConversationManager()
     private let storageKey = "conversations"

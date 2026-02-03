@@ -1,4 +1,4 @@
-internal import SwiftUI
+import SwiftUI
 
 struct SettingsView: View {
     @AppStorage("apiKey") private var apiKey: String = ""

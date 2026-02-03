@@ -25,7 +25,7 @@ struct ChatContentView: View {
                 }
         } detail: {
             // Main chat view
-            if let convo = selectedConversation {
+            if selectedConversation != nil {
                 ChatView(conversation: $selectedConversation)
             } else {
                 Text("Select a conversation")

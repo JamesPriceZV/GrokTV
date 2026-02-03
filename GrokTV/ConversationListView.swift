@@ -1,4 +1,4 @@
-internal import SwiftUI
+import SwiftUI
 
 struct ConversationListView: View {
     @Binding var selectedConversation: Conversation?
